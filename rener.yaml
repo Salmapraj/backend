@@ -1,6 +1,9 @@
 services:
   - type: web
-    name: chalaurbackend
-    env: python
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn app:app"
+    name: chaiaurbackend
+    env: node
+    buildCommand: "npm install "
+    startCommand: "node index.js"
+    envVars:
+      - name: NODE_ENV
+        value: production
